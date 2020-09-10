@@ -2,6 +2,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 https://www.youtube.com/watch?v=pSzY5kh9MCs&list=PLB97yPrFwo5j60AxzdZVC3dOJvJy4Oxkp&index=11
 
+In this we will see what are action creators and redux thunk 
+redux thunk is the middleware used for asynchronous operations like get , post , delete etc . it breaks the default behaviour of action creators that is immediately dispatch of action by using redux thunk we can pause the dispatch of action and do some asynchronous task then dispatch it. 
+
+https://github.com/zalmoxisus/redux-devtools-extension
+
+https://jsonplaceholder.typicode.com/users
+
 ## Available Scripts
 
 In the project directory, you can run:
