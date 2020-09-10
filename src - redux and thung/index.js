@@ -5,19 +5,13 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {createStore, applyMiddleware,compose, combineReducers } from 'redux'; //thung (applyMiddleware,compose)
 import { Provider } from 'react-redux';
-// import reducer from "./reducers/reducer" //only till the thung and redux, now we use nameReducer for combined reducer
-import namereducer from "./reducers/nameReducer"
-import wishReducer from "./reducers/wishReducer"
+import reducer from "./reducers/reducer" //only till the thung and redux, now we use nameReducer for combined reducer
 import thunk from "redux-thunk" //thung
 
-const masterReducer = combineReducers({
-  cname:namereducer,
-  wish:wishReducer
-})
 //second argument used to storing react redux - brower
 // const store = createStore(reducer,  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()); //erdux
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; //thung
-const store = createStore(masterReducer,{cname:"Suresh", wish:["apple", "mango"]}, composeEnhancers (applyMiddleware(thunk))); //thung devtols, setting default for combined reducer
+const store = createStore(reducer, composeEnhancers (applyMiddleware(thunk))); //thung devtols
 
 
 

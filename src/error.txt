@@ -1,0 +1,25 @@
+Error: Objects are not valid as a React child (found: object with keys {0, 1, 2, 3, 4, 5, cname}). If you meant to render a collection of children, use an array instead.
+    in h1 (at App.js:10)
+    in div (at App.js:9)
+    in App (created by ConnectFunction)
+    in ConnectFunction (at src/index.js:27)
+    in Provider (at src/index.js:26)
+    in StrictMode (at src/index.js:25)
+
+    solution
+    remove below 
+      return{
+             ...state, ////used to preserve the value
+             cname:action.payload
+         }##
+    
+    replace 
+    return action.cname
+
+    error 2:
+    ×
+Unhandled Rejection (Error): Given action "CHANGE_NAME", reducer "cname" returned undefined. 
+To ignore an action, you must explicitly return the previous state. 
+If you want this reducer to hold no value, you can return null instead of undefined.
+solution 
+return action.payload
