@@ -23,16 +23,17 @@ const mapStateToProps = (state) =>{
 //mapDispatchToProps -- this is to dispatch data
 const mapDispatchToProps = (dispatch)=>{
   return{
-    //this is method
-    changeName:(cname)=>{
-      // dispatch({type:"CHANGE_NAME", payload:cname})//change in first part
-      dispatch(anotherName(cname))
-    }
+   
+    // changeName:(cname)=>{ //this is method, dispatch({type:"CHANGE_NAME", payload:cname})//change in first part
+    //   dispatch(anotherName(cname))
+    // }
+    changeName:()=>{dispatch(anotherName())} //for thung
   }
 }
 
 export default connect(mapStateToProps,mapDispatchToProps) (App);
 
 //note name can be any thing : mapStateToProps/mapDispatchToProps
-
+//onload I am App component and myname is : Devesh
+////After click o the button-  I am App component and myname is : Leanne Graham
 
